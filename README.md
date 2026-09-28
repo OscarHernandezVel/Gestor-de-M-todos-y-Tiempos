@@ -23,8 +23,7 @@ de punteros** (`prev`, `next`, `head`, `tail`, `cursor`).
 
 ## Requisitos
 
-* **Python 3.9 o superior.** No requiere instalar paquetes: usa solo la biblioteca estándar.
-* Un navegador moderno (Chrome, Edge, Firefox o Safari).
+* **Python 3.9 o superior.** 
 
 ## Ejecución
 
@@ -42,19 +41,12 @@ python run.py --host 0.0.0.0    # permitir acceso desde otra PC/tablet de la red
 python run.py --verbose         # registrar cada petición HTTP
 ```
 
-## Pruebas y benchmark
-
-```bash
-python -m unittest discover -s tests -t . -v     # 69 pruebas (incluye pruebas aleatorias masivas)
-python benchmarks/bench_operations.py            # O(1) de la lista doble vs O(n) de list
-```
-
 ## Estructura del proyecto
 
 ```
 lineflow/
 ├── run.py                          # Punto de entrada (servidor + navegador)
-├── lineflow/
+├── services/
 │   ├── core/
 │   │   └── doubly_linked_list.py   # Nodo, lista doble, cursor, punteros, validación
 │   ├── domain/
@@ -69,16 +61,6 @@ lineflow/
 │       ├── server.py               # Servidor HTTP (biblioteca estándar)
 │       ├── api.py                  # Rutas REST/JSON
 │       └── static/                 # index.html, styles.css, app.js (front-end)
-├── tests/                          # Pruebas unitarias, aleatorias y de integración
 ├── benchmarks/                     # Comparación de rendimiento
-└── docs/                           # Documentación técnica en español
+└── docs/                           # Mock-Up
 ```
-
-## Documentación
-
-1. [Arquitectura del sistema](docs/01_arquitectura.md)
-2. [La lista doblemente enlazada y sus punteros](docs/02_lista_doble_enlazada.md)
-3. [Manual de usuario](docs/03_manual_de_usuario.md)
-4. [Referencia de la API](docs/04_api.md)
-5. [Ingeniería de métodos: fórmulas utilizadas](docs/05_ingenieria_de_metodos.md)
-6. [Pruebas y rendimiento](docs/06_pruebas_y_rendimiento.md)
